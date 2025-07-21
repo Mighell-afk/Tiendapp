@@ -43,29 +43,9 @@ End Code
 
 </head>
 <body>
-
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="acerca.html">Acerca de</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="ayuda.html">Ayuda</a>
-    </nav>
-
-    <div class="contenido">
-        <h1>Bienvenido al Sistema</h1>
-        <p>Este es un menú básico hecho con HTML y un poco de CSS.</p>
-    </div>
-
-    <div class="abm-section">
-        <h2>Gestión de Tablas Menores (ABM)</h2>
-        <div class="abm-links">
-            <ul>
-                <li><a href="/Ciudad/Index">Ciudad</a></li>
-                <li><a href="especialidades.html">Tipo de pago</a></li>
-            </ul>
-             
-        </div>
-    </div>
+    <h1>BIENVENIDO AL SISTEMA</h1>
+    <br />
+    <h2>GESTION DE ...</h2>
 
 </body>
 </html>

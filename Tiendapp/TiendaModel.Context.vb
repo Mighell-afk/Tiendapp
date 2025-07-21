@@ -10,6 +10,8 @@
 Imports System
 Imports System.Data.Entity
 Imports System.Data.Entity.Infrastructure
+Imports System.Data.Entity.Core.Objects
+Imports System.Linq
 
 Partial Public Class TiendaEntities
     Inherits DbContext
@@ -29,5 +31,12 @@ Partial Public Class TiendaEntities
     Public Overridable Property Producto() As DbSet(Of Producto)
     Public Overridable Property TipoPago() As DbSet(Of TipoPago)
     Public Overridable Property Venta() As DbSet(Of Venta)
+
+    <DbFunction("TiendaEntities", "fn_VentasPorCliente")>
+    Public Overridable Function fn_VentasPorCliente(id As Nullable(Of Integer)) As IQueryable(Of fn_VentasPorCliente_Result)
+        Dim idParameter As ObjectParameter = If(id.HasValue, New ObjectParameter("id", id), New ObjectParameter("id", GetType(Integer)))
+
+         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.CreateQuery(Of fn_VentasPorCliente_Result)("[TiendaEntities].[fn_VentasPorCliente](@id)", idParameter)
+    End Function
 
 End Class

@@ -60,7 +60,65 @@ Namespace Controllers
         End Function
 
 
+
+        Function VentasPorCliente()
+            Return View()
+
+        End Function
+
+
+        Function RecuperarVenta(id As Integer) As JsonResult
+
+            Dim Ventaseleccionada = (From venta In db.Venta
+                                     Where venta.VentaID = id
+                                     Select New With {
+                                         venta.VentaID,
+                                         venta.FechaVenta,
+                                         venta.ClienteID,
+                                         venta.TipoPagoID
+                                     }).FirstOrDefault()
+
+            Dim DetalleVentaseleccionado = (From dv In db.DetalleVenta
+                                            Join p In db.Producto
+                     On dv.ProductoID Equals p.ProductoID
+                                            Where dv.VentaID = id   ' idVenta es tu parámetro
+                                            Select New With {
+                    p.ProductoID,
+                    p.Nombre,
+                    p.Precio,
+                    p.Stock,
+                    dv.Cantidad
+                }).ToList
+
+            Return New JsonResult With {
+                .Data = New With {
+                    .venta = Ventaseleccionada,
+                    .detalleventa = DetalleVentaseleccionado
+                },
+                .JsonRequestBehavior = JsonRequestBehavior.AllowGet
+            }
+
+        End Function
+
+
+        Function ObtenerVentasConCliente(id As Integer) As JsonResult
+
+
+            Try
+                Dim resultado = db.fn_VentasPorCliente(id)
+                Return Json(resultado.ToList(), JsonRequestBehavior.AllowGet)
+
+            Catch ex As Exception
+                Return Json(New With {
+                    .error = True,
+                    .mensaje = "Error al obtener ventas con cliente: " & ex.Message
+                }, JsonRequestBehavior.AllowGet)
+            End Try
+        End Function
+
     End Class
+
+
 
     Public Class VentaViewModel
         Public Property Clientes As IEnumerable(Of Cliente)

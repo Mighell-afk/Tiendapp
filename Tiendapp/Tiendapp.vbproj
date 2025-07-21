@@ -161,6 +161,9 @@
     <Compile Include="DetalleVenta.vb">
       <DependentUpon>TiendaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="fn_VentasPorCliente_Result.vb">
+      <DependentUpon>TiendaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -244,6 +247,7 @@
     <Content Include="Views\Plantillas\Dashboard.vbhtml" />
     <Content Include="Views\Venta\Venta.vbhtml" />
     <Content Include="Views\Venta\Index.vbhtml" />
+    <Content Include="Views\Venta\VentasPorCliente.vbhtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
