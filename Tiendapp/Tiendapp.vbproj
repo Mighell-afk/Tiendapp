@@ -131,6 +131,7 @@
     <Content Include="scripts\js\dashboard.js" />
     <Content Include="scripts\js\jquery-3.7.1.min.js" />
     <Content Include="scripts\js\Raza.js" />
+    <Content Include="scripts\js\Venta.js" />
     <Content Include="TiendaModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TiendaModel.edmx</DependentUpon>
@@ -156,6 +157,7 @@
     </Compile>
     <Compile Include="Controllers\CiudadController.vb" />
     <Compile Include="Controllers\HomeController.vb" />
+    <Compile Include="Controllers\VentaController.vb" />
     <Compile Include="DetalleVenta.vb">
       <DependentUpon>TiendaModel.tt</DependentUpon>
     </Compile>
@@ -240,6 +242,8 @@
     <Content Include="Views\Ciudad\Delete.vbhtml" />
     <Content Include="Views\Ciudad\Edit.vbhtml" />
     <Content Include="Views\Plantillas\Dashboard.vbhtml" />
+    <Content Include="Views\Venta\Venta.vbhtml" />
+    <Content Include="Views\Venta\Index.vbhtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
