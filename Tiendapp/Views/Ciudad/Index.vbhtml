@@ -6,7 +6,7 @@ End Code
 
 
 <!-- Button trigger modal -->
-<a href="Create" class="btn btn-success">Crear Nueva Ciudad</a>
+<a href="/Ciudad/Create" class="btn btn-success">Crear Nueva Ciudad</a>
 
 
 <div id="DIVciudad">

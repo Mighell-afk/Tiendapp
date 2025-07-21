@@ -24,7 +24,7 @@ function crearListado(data) {
         contenido += "<tr>";
         contenido += "<td>" + fila.CiudadID + "</td>";
         contenido += "<td>" + fila.Nombre + "</td>";
-        contenido += "<td>" + `<a href='Edit/${fila.CiudadID}' class='btn btn-primary'>Modificar</a> - <a href='Delete/${fila.CiudadID}' class='btn btn-danger'>Eliminar</a>` + "</td>"
+        contenido += "<td>" + `<a href='/Ciudad/Edit/${fila.CiudadID}' class='btn btn-primary'>Modificar</a> - <a href='/Ciudad/Delete/${fila.CiudadID}' class='btn btn-danger'>Eliminar</a>` + "</td>"
         contenido += "</tr>";
     }
 

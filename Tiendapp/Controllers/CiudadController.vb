@@ -10,7 +10,7 @@ Namespace Controllers
         ' GET: Ciudad
         Function Index() As ActionResult
             Dim listCiudad As New List(Of Ciudad)
-            listCiudad = db.Ciudad.ToList
+            listCiudad = db.Ciudad.ToList()
             Return View(listCiudad)
         End Function
 
