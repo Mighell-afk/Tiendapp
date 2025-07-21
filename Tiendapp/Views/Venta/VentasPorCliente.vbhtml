@@ -9,7 +9,7 @@ End Code
     <div class="card-body d-flex align-items-center">
         <label id="txtclienteDetalle" class="me-3 mb-0">Cliente: </label>
 
-        <label class="me-3 mb-0">Venta: <input id="inputventa" type="text" class="form-control form-control-sm d-inline-block" style="width: 200px;"></label>
+        <label class="me-3 mb-0">Venta: <input id="inputventa" type="text"  placeholder="Ingrese el ID de venta"   class="form-control form-control-sm d-inline-block" style="width: 200px;"></label>
         <div>
             <button id="btnBuscarVenta" onclick="obtenerVenta()" data-toggle="modal" data-target="#modalproducto" class="btn btn-primary">Buscar Venta    </button>
             <button id="btnBuscarVentaCliente" onclick="$('#modalcliente').modal('show')" data-toggle="modal" data-target="#modalproducto" class="btn btn-primary">Buscar Ventas Cliente    </button>

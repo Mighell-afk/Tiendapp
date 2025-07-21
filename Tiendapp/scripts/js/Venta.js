@@ -162,40 +162,6 @@ async function obtenerVenta() {
         }
     });
 }
-
-function añadirDetalleVenta(data) {
-    const tbody = document.getElementById("tbody");
-    var cantidadarticulos = 0
-
-    for (let i = 0; i < data.detalleventa.length; i++) {
-
-        const nuevaFila = document.createElement("tr");
-
-
-        nuevaFila.innerHTML = `
-            <td>${data.detalleventa[i].CodBarra}</td>
-            <td>${data.detalleventa[i].Nombre}</td>
-            <td>${data.detalleventa[i].Descripcion}</td>
-             <td>${data.detalleventa[i].Precio}</td>
-            <td>${data.detalleventa[i].cantidad}</td>
-            <td>${data.detalleventa[i].subtotal}</td>
-        `;
-        cantidadarticulos += data.detalleventa[i].cantidad
-        tbody.appendChild(nuevaFila);
-
-
-    }
-    document.getElementById("txtclienteDetalle").innerText = `Cliente: ${data.venta.CI}`
-    document.getElementById("totalMonto").innerText = `₲ ${data.venta.monto}`
-    document.getElementById("inputventa").setAttribute("disabled", "disabled")
-    document.getElementById("totalItems").innerText = cantidadarticulos
-
-
-
-
-
-}
-
 function obtenerVentasCliente() {
     let id = document.getElementById("txtcliente").value
     console.log("Código ingresado: " + id);
@@ -293,6 +259,7 @@ async function obtenerVenta(idventa) {
 
 function añadirDetalleVenta(data) {
     const tbody = document.getElementById("tbody");
+    tbody.innerHTML = ""
     var cantidadarticulos = 0
     var montototal = 0
 
@@ -316,11 +283,6 @@ function añadirDetalleVenta(data) {
     }
     document.getElementById("txtclienteDetalle").innerText = `Cliente: ${data.venta.ClienteID}`
     document.getElementById("totalMonto").innerText = `₲ ${montototal}`
-    document.getElementById("inputventa").setAttribute("disabled", "disabled")
     document.getElementById("totalItems").innerText = cantidadarticulos
-
-
-
-
 
 }
