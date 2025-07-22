@@ -166,11 +166,35 @@ End Code
             </main>
         </div>
     </div>
+   
+
+<!-- Modal -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="aboutModalLabel">Acerca de Tiendapp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Desarrollado por:</p>
+                    <ul>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                        <li>.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous" class="astro-vvvwv3sm"></script>
-
     <script src="@Url.Content("~/scripts/js/jquery-3.7.1.min.js")"></script>
-
     <script src="@Url.Content("~/scripts/js/bootstrap.bundle.min.js")"></script>
     <script src="~/scripts/js/dashboard.js"></script>
 </body>
