@@ -179,10 +179,11 @@ End Code
                 <div class="modal-body">
                     <p>Desarrollado por:</p>
                     <ul>
-                        <li>.</li>
-                        <li>.</li>
-                        <li>.</li>
-                        <li>.</li>
+                        <li>Lia Fiorella Cano Forcadell</li>
+                        <li>José Miguel Cabrera</li>
+                        <li>Lucas Iván Cubilla Fleitas</li>
+                        <li>Luis Alejandro Vázquez Espinola</li>
+                         <li>Oscar Iván Miñarro Franco</li>
                     </ul>
                 </div>
                 <div class="modal-footer">
