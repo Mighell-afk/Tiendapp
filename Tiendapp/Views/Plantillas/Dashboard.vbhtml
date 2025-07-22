@@ -179,10 +179,11 @@ End Code
                 <div class="modal-body">
                     <p>Desarrollado por:</p>
                     <ul>
-                        <li>.</li>
-                        <li>.</li>
-                        <li>.</li>
-                        <li>.</li>
+                        <li>Lucas Cubilla</li>
+                        <li>Jose Cabrera</li>
+                        <li>Oscar Miñarro</li>
+                        <li>Lia Cano</li>
+                         <li>Alejandro Vazquez</li>
                     </ul>
                 </div>
                 <div class="modal-footer">
