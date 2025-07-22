@@ -122,10 +122,12 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="scripts\css\bootstrap.min.css" />
     <Content Include="scripts\css\dashboard.css" />
     <Content Include="scripts\js\bootstrap.bundle.min.js" />
+    <Content Include="scripts\js\producto.js" />
     <Content Include="scripts\js\ciudad.js" />
     <Content Include="scripts\js\color-modes.js" />
     <Content Include="scripts\js\dashboard.js" />
@@ -157,6 +159,7 @@
     </Compile>
     <Compile Include="Controllers\CiudadController.vb" />
     <Compile Include="Controllers\HomeController.vb" />
+    <Compile Include="Controllers\ProductoController.vb" />
     <Compile Include="Controllers\VentaController.vb" />
     <Compile Include="DetalleVenta.vb">
       <DependentUpon>TiendaModel.tt</DependentUpon>
@@ -248,6 +251,8 @@
     <Content Include="Views\Venta\Venta.vbhtml" />
     <Content Include="Views\Venta\Index.vbhtml" />
     <Content Include="Views\Venta\VentasPorCliente.vbhtml" />
+    <Content Include="Views\Producto\Index.vbhtml" />
+    <Content Include="Views\Producto\Create.vbhtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -258,6 +263,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
